@@ -13,11 +13,6 @@ name: 构建内核
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
-on:
-  schedule:
-    - cron: '0 8 * * 1'  # 每周一 UTC 8:00
-  workflow_dispatch:
-
 # 并发控制：同一分支只运行一个实例，新运行会取消旧的
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
