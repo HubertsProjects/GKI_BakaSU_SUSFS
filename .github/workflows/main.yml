@@ -23,8 +23,6 @@ permissions:
   actions: write
 
 on:
-  schedule:
-    - cron: '30 8 * * MON'  # 
   workflow_dispatch:
     inputs:
       # ==================== 发布配置 ====================
